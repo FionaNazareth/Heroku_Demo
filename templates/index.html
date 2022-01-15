@@ -1,0 +1,71 @@
+<body>
+    <h1>Predict price of diamonds</h1>
+    <form action="{{url_for('predict')}}" method="post">
+        <label>Carat weight:</label>
+        <input type="text" name="car_wt" required = "required">
+
+        <br><br>
+
+        <label>Cut:</label>
+        <select name="cut">
+            <option value="0">Fair</option>
+            <option value="1">Good</option>
+            <option value="2">Ideal</option>
+            <option value="3">Signature-Ideal</option>
+            <option value="4">Very Good</option>
+        </select>
+
+        <br><br>
+
+        <label>Color:</label>
+        <select name="color">
+            <option value="0">D</option>
+            <option value="1">E</option>
+            <option value="2">F</option>
+            <option value="3">G</option>
+            <option value="4">H</option>
+            <option value="5">I</option>
+        </select>
+
+        <br><br>
+
+        <label>Clarity:</label>
+        <select name="clarity">
+            <option value="0">FL</option>
+            <option value="1">IF</option>
+            <option value="2">SI1</option>
+            <option value="3">VS1</option>
+            <option value="4">VS2</option>
+            <option value="5">VVS1</option>
+            <option value="5">VVS2</option>
+        </select>
+
+        <br><br>
+
+        <label>Polish:</label>
+        <select name="polish">
+            <option value="0">EX</option>
+            <option value="1">G</option>
+            <option value="2">ID</option>
+            <option value="3">VG</option>
+        </select>
+
+        <br><br>
+
+        <label>Symmetry:</label>
+        <select name="symmetry">
+            <option value="0">EX</option>
+            <option value="1">G</option>
+            <option value="2">ID</option>
+            <option value="3">VG</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <br><br>
+
+    <h3>{{prediction_text}}</h3>
+</body>
